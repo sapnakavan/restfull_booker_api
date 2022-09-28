@@ -34,11 +34,10 @@ public class BookingPostTest extends TestBase {
         bookingPojo.setAdditionalneeds("breakfast");
 
         Response response=given()
-                .basePath("/booking")
                 .header("Content-Type","application/json")
                 .body(bookingPojo)
                 .when()
-                .post();
+                .post("/booking");
         response.then();
         response.prettyPrint();
     }
