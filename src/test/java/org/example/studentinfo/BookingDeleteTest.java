@@ -13,10 +13,9 @@ public class BookingDeleteTest extends TestBase {
     @Test
     public void delete(){
         Response response=given()
-                .pathParam("id","3")
                 .when()
-                .delete("/{id}");
-        response.then().statusCode(204);
+                .delete("/booking/1535");
+        response.then();
         response.prettyPrint();
     }
 }

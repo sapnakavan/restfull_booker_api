@@ -25,7 +25,7 @@ public class BookingGetTest extends TestBase {
     public void getSingleBookingInfo() {
     Response response=given()
             .when()
-            .get("/booking/922");
+            .get("/booking/1535");
     response.then().statusCode(200);
     response.prettyPrint();
     }
